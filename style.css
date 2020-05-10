@@ -1,0 +1,179 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px; }
+
+* {
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", Arial, sans-serif;
+  color: #56AF26;
+  font-weight: lighter; }
+
+h1 {
+  font-size: 2.6rem; }
+
+h2 {
+  font-size: 2.1rem; }
+
+h3 {
+  font-size: 1.7rem; }
+
+h4 {
+  font-size: 1.46rem; }
+
+p {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5em; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+img {
+  max-width: 100%; }
+
+/*******  HEADER ****** */
+header {
+  border-bottom: 1.5px solid rgba(200, 200, 200, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: #fff; }
+  header #sidebar {
+    background: #fff;
+    height: calc(100vh - 51.5px);
+    position: absolute;
+    top: 51.5px;
+    left: -100vw;
+    z-index: 50;
+    width: 100%;
+    transition: 0.4s left; }
+    header #sidebar #side-nav-list {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(50% - 51.5px);
+      transform: translateY(-50%);
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, auto); }
+      header #sidebar #side-nav-list li a {
+        display: block;
+        font-family: "Open Sans", Arial, sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        color: black;
+        margin: 1em;
+        font-size: 1.1rem;
+        font-weight: lighter; }
+        header #sidebar #side-nav-list li a.selected {
+          color: #56AF26; }
+  header nav {
+    display: grid;
+    grid-template-columns: 1fr 13fr; }
+    header nav #logo-container {
+      text-align: center; }
+    header nav #logo {
+      display: inline-block;
+      margin-left: -50.52px;
+      text-align: center;
+      padding: 0.5em 0;
+      text-transform: uppercase;
+      color: #56AF26;
+      font-size: 1.1rem; }
+    header nav .nav-btn {
+      font-size: 1.7rem;
+      padding: 0.3em 0.5em;
+      align-self: center;
+      cursor: pointer;
+      display: inline-block; }
+    header nav #close-btn {
+      display: none; }
+    header nav #nav-list {
+      display: none; }
+
+#nav-link ul li a.selected {
+  color: #56AF26; }
+
+#container {
+  margin-top: calc(51.5px - 1px);
+  padding: 0; }
+  #container #landing {
+    height: calc(100vh - 51.5px);
+    width: 100%;
+    background-image: url("images/pic5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; }
+    #container #landing #overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #000;
+      opacity: 0.7; }
+    #container #landing #cta {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center; }
+      #container #landing #cta h1 {
+        color: white;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto 0.5em;
+        font-family: "Open Sans", Arial, sans-serif; }
+
+/******* MEDIA QUERIES ****** */
+@media (min-width: 45rem) {
+  header nav {
+    grid-template-columns: repeat(2, auto); }
+    header nav #logo-container {
+      align-self: center;
+      text-align: left; }
+      header nav #logo-container #logo {
+        margin: 0;
+        padding-left: 1em;
+        align-self: center; }
+    header nav .nav-btn {
+      display: none; }
+    header nav #nav-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end; }
+      header nav #nav-list li a {
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 1.3rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: black;
+        padding: 1em 0.6em;
+        display: inline-block; }
+        header nav #nav-list li a:visited {
+          color: black; }
+        header nav #nav-list li a:hover, header nav #nav-list li a.selected {
+          color: #56AF26; }
+  header #sidebar {
+    display: none; }
+
+  #container {
+    margin-top: 71.5px; }
+    #container #landing {
+      height: calc(100vh - 71.5px); }
+      #container #landing #cta h1 {
+        font-size: 3.4rem; } }
+
+/*# sourceMappingURL=style.css.map */

@@ -5,6 +5,8 @@
     <title>Darren Thompson</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
@@ -12,7 +14,69 @@
 
 <body>
 
+    <header>
+        <nav>
+            <i class="fa fa-bars nav-btn" id="menu-btn"></i>
+            <i class="fa fa-close nav-btn" id="close-btn"></i>
+            <div id="logo-container">
+                <p id="logo">Darren Thompson</p>
+            </div>
 
+            <ul id="nav-list">
+                <li><a href="#landing" class="nav-link selected">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+
+            <div id="sidebar">
+                <ul id="side-nav-list">
+                    <li><a href="#landing" class="nav-link selected">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="container">
+        <div id="landing">
+            <div id="overlay"></div>
+            <div id="cta">
+                <h1>Hi! I&#39;m Darren, an up and coming software engineer.<br>Scroll to learn more!</h1>
+            </div>
+        </div>
+
+        <div id="about">
+            <img src="me.jpg" alt="Me">
+            <p>I am a sophomore at Kennesaw State University studying Computer Science. I am pursuing a career in Software Developmentand/or Cybersecurity.</p>
+
+            <h3>Skills</h3>
+            <ul id="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>C#</li>
+                <li>C++</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+
+        <div id="projects">
+
+        </div>
+
+        <div id="contact">
+
+        </div>
+
+        <footer>
+            <p>&copy; </p>
+        </footer>
+    </div>
 
 </body>
 
