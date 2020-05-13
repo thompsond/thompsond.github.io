@@ -1,24 +1,27 @@
 $fontmain: 'Open Sans', Arial, sans-serif
 $fonthead: 'Lora', Arial, sans-serif
 $fontother: 'Lato', Arial, sans-serif
-$green: #56AF26
-$md: 45rem
-$md2: 53rem
-$lg: 60rem
-$nav-height-sm: 51.5px
-$nav-height-lg: 71.5px
+$blue: #0F4775
+$lightblue: #4884B6
+$md: 720px
+$lg: 1024px
+$xl: 1920px
+$xxl: 2400px
 
 html, body
   margin: 0
   padding: 0
   font-size: 16px
 
+body
+  background-color: #F1F1F1
+
 *
   box-sizing: border-box
 
 h1, h2, h3, h4, h5, h6
   font-family: $fontother
-  color: $green
+  color: $blue
   font-weight: lighter
 
 h1
@@ -45,6 +48,11 @@ ul
 
 a
   text-decoration: none
+  &:link, &:hover, &:visited, &:active
+    color: black
+
+a, a:active, a:focus
+  outline: none
 
 img
   max-width: 100%
@@ -60,9 +68,7 @@ header
   background: #fff
   #sidebar
     background: #fff
-    height: calc(100vh - #{$nav-height-sm})
     position: absolute
-    top: $nav-height-sm
     left: -100vw
     z-index: 50
     width: 100%
@@ -71,7 +77,6 @@ header
       position: absolute
       left: 0
       right: 0
-      top: calc(50% - #{$nav-height-sm})
       transform: translateY(-50%)
       display: grid
       grid-template-columns: 1fr
@@ -87,7 +92,7 @@ header
           font-size: 1.1rem
           font-weight: lighter
           &.selected
-            color: $green
+            color: $blue
   nav
     display: grid
     grid-template-columns: 1fr 13fr
@@ -95,31 +100,32 @@ header
       text-align: center
     #logo
       display: inline-block
-      margin-left: -50.52px
+      margin-left: -51px
       text-align: center
       padding: .5em 0
       text-transform: uppercase
-      color: $green
+      color: $blue
       font-size: 1.1rem
     .nav-btn
       font-size: 1.7rem
-      padding: .3em .5em
+      padding: .9em .5em
       align-self: center
       cursor: pointer
       display: inline-block
+      width: 51px
     #close-btn
       display: none
     #nav-list
       display: none
 #nav-link
   ul li a.selected
-    color: $green
+    color: $blue
 
+
+/*******  MAIN *******/
 #container
-  margin-top: calc(#{$nav-height-sm} - 1px)
   padding: 0
   #landing
-    height: calc(100vh - #{$nav-height-sm})
     width: 100%
     background-image: url('images/pic5.jpg')
     background-size: cover
@@ -147,7 +153,122 @@ header
         width: 90%
         margin: 0 auto .5em
         font-family: $fontmain
-    
+#about
+  margin-top: 20px
+img#profile-pic
+  display: block
+  width: 200px
+  border-radius: 50%
+  margin: 0 auto 20px auto
+p#bio
+  text-align: center
+  
+.info-container
+  margin: 15px 0 15px 10px
+  h3
+    margin: 15px 0 10px 5px
+    color: $blue
+ul.info-list
+  margin-left: 25px
+  &>li
+    span
+      left: -1.3em
+      i
+        font-size: 1.1rem
+        color: $lightblue
+  li
+    padding: 5px
+    font-family: $fontmain
+    width: 75%
+.list-icon
+  color: $lightblue
+#contact-list
+  text-align: center
+  margin-bottom: 10px
+  li
+    display: inline-block
+    margin: 0 3px
+    i
+      color: $blue
+      font-size: 1.4rem
+    a, a:visited, a:link
+      color: black
+ul.sub-info-list
+  margin-left: 35px
+  li
+    line-height: 1.5
+    span
+      left: -1.5em
+      i
+        color: $lightblue
+        font-size: 0.8em
+
+#projects-list
+  li
+    strong
+      font-family: $fontother
+      font-size: 1.2rem
+    a span
+      left: -1.55em
+  &>li
+    &:not(:first-child)
+      margin-top: 15px
+
+#contact-container
+  padding: 0 10px
+  h3
+    text-align: center
+    margin-left: 0
+  #contact-form
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(6, auto)
+    grid-row-gap: 1.5em
+    justify-items: center
+    fieldset
+      border: none
+      margin: 0
+      padding: 0
+      width: 100%
+      label
+        font-family: $fontmain
+        font-size: 0.9rem
+        display: block
+        margin-bottom: .4em
+    input, textarea
+      display: block
+      font-size: 1rem
+      padding: .7em .5em
+      border: 1px solid #aaa
+      width: 100%
+      -webkit-appearance: none
+      -webkit-border-radius: 0
+      font-family: $fontmain
+    textarea
+      min-height: 10em
+      margin: 0
+    #submit
+      border: none
+      text-transform: uppercase
+      color: white
+      background: $lightblue
+      padding: .8em
+      font-size: 1.1rem
+      font-family: $fontmain
+      font-weight: lighter
+      letter-spacing: .5px
+      cursor: pointer
+      &:hover
+        background: darken($lightblue, 10)
+
+/******* FOOTER *******/
+footer
+  background-color: #000
+  text-align: center
+  p
+    color: #fff
+    display: inline-block
+    font-weight: lighter
 
 
 /******* MEDIA QUERIES *******/
@@ -180,15 +301,46 @@ header
             &:visited
               color: black
             &:hover, &.selected
-              color: $green
+              color: $blue
 
     #sidebar
       display: none
 
   #container
-    margin-top: $nav-height-lg
     #landing
-      height: calc(100vh - #{$nav-height-lg})
       #cta
         h1
           font-size: 3.4rem
+  #contact-container
+    #contact-form
+      margin: 0 20vw
+
+@media (min-width: $lg)
+  #contact-container
+    #contact-form
+      margin: 0 30vw
+
+@media (min-width: $xl)
+  h1
+    font-size: 3.2rem
+
+  h2
+    font-size: 2.6rem
+
+  h3
+    font-size: 2.2rem
+
+  h4
+    font-size: 1.9rem
+
+  p
+    font-family: $fontmain
+  
+  a, p
+    font-size: 1.4rem
+
+  #profile-pic
+    width: 235px
+
+  li
+    max-width: 40%
