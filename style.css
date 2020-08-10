@@ -47,6 +47,12 @@ a, a:active, a:focus {
 img {
   max-width: 100%; }
 
+.company-name {
+  font-weight: bolder; }
+
+.experience-duration {
+  font-style: italic; }
+
 /*******  HEADER ****** */
 header {
   border-bottom: 1.5px solid rgba(200, 200, 200, 0.7);
@@ -197,10 +203,11 @@ ul.sub-info-list {
         color: #4884B6;
         font-size: 0.8em; }
 
-#projects-list li strong {
+#projects-list li a span.project-title {
   font-family: "Lato", Arial, sans-serif;
-  font-size: 1.2rem; }
-#projects-list li a span {
+  font-size: 1.2rem;
+  font-weight: bold; }
+#projects-list li a span:not(.project-title) {
   left: -1.55em; }
 #projects-list > li:not(:first-child) {
   margin-top: 15px; }

@@ -57,6 +57,12 @@ a, a:active, a:focus
 img
   max-width: 100%
 
+.company-name
+  font-weight: bolder
+
+.experience-duration
+  font-style: italic
+
 /*******  HEADER *******/
 header
   border-bottom: 1.5px solid rgba(200,200,200,0.7)
@@ -205,11 +211,14 @@ ul.sub-info-list
 
 #projects-list
   li
-    strong
-      font-family: $fontother
-      font-size: 1.2rem
-    a span
-      left: -1.55em
+    a
+      span
+        &.project-title
+          font-family: $fontother
+          font-size: 1.2rem
+          font-weight: bold
+        &:not(.project-title)
+          left: -1.55em
   &>li
     &:not(:first-child)
       margin-top: 15px
