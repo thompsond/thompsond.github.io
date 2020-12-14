@@ -73,7 +73,7 @@ experienceMap.set('Computer Science Tutor/Lab Assistant', {
         "Assists students with troubleshooting computer programs and hardware issues.",
         "Tutoring students in the following classes: Web Development, Programming 1 & 2, Data Structures, Computer Organization & Architecture, and Intro to Database Systems."
     ],
-    duration: "August 2019 - present"
+    duration: "August 2019 - August 2020"
 });
 
 experienceMap.forEach(function(values, title) {
