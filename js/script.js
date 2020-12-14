@@ -92,6 +92,15 @@ experienceMap.forEach(function(values, title) {
 
 // Info for projects
 let projectsMap = new Map();
+
+projectsMap.set('Elevator Simulator', {
+    descriptions: [
+        "This project is a web application created with React that simulates a single-cart elevator.",
+        "The elevator calls are handled using two priority queues: one for up calls and one for down calls."
+    ],
+    link: "https://github.com/thompsond/Elevator-Simulator"
+});
+
 projectsMap.set('AVMisc', {
     descriptions: [
         "This project is written in Java and uses several libraries to provide the user access to various items on the system such as files, microphone, speaker, webcams, clipboard, etc.",
